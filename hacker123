@@ -1,0 +1,92 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local createpart = Instance.new("TextButton")
+local givebtools = Instance.new("TextButton")
+local bestfunction = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(85, 85, 127)
+Frame.Position = UDim2.new(0.260408789, 0, 0.192176878, 0)
+Frame.Size = UDim2.new(0, 543, 0, 405)
+Frame.Visible = false
+
+createpart.Name = "create part"
+createpart.Parent = Frame
+createpart.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+createpart.Position = UDim2.new(0.0698412731, 0, 0.0790123492, 0)
+createpart.Size = UDim2.new(0, 161, 0, 50)
+createpart.Font = Enum.Font.SourceSansBold
+createpart.Text = "create part"
+createpart.TextColor3 = Color3.fromRGB(0, 0, 0)
+createpart.TextScaled = true
+createpart.TextSize = 14.000
+createpart.TextWrapped = true
+
+givebtools.Name = "give btools"
+givebtools.Parent = Frame
+givebtools.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+givebtools.Position = UDim2.new(0.0698412731, 0, 0.306172848, 0)
+givebtools.Size = UDim2.new(0, 161, 0, 50)
+givebtools.Font = Enum.Font.SourceSansBold
+givebtools.Text = "give btools"
+givebtools.TextColor3 = Color3.fromRGB(0, 0, 0)
+givebtools.TextScaled = true
+givebtools.TextSize = 14.000
+givebtools.TextWrapped = true
+givebtools.MouseButton1Click:Connect(function()
+	local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	local tool4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	local tool5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	tool1.BinType = "Clone"
+	tool2.BinType = "GameTool"
+	tool3.BinType = "Hammer"
+	tool4.BinType = "Script"
+	tool5.BinType = "Grab"
+end)
+
+bestfunction.Name = "best function"
+bestfunction.Parent = Frame
+bestfunction.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bestfunction.Position = UDim2.new(0.504604042, 0, 0.0790123492, 0)
+bestfunction.Size = UDim2.new(0, 200, 0, 50)
+bestfunction.Font = Enum.Font.SourceSansBold
+bestfunction.Text = "best function"
+bestfunction.TextColor3 = Color3.fromRGB(0, 0, 0)
+bestfunction.TextScaled = true
+bestfunction.TextSize = 14.000
+bestfunction.TextWrapped = true
+bestfunction.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/koonpeatch/PeatEX/master/BKHAX/BloxFruits"),true))()
+end)
+
+Open.Name = "Open"
+Open.Parent = ScreenGui
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.Position = UDim2.new(-0.0052990336, 0, 0.409863949, 0)
+Open.Size = UDim2.new(0, 200, 0, 50)
+Open.Font = Enum.Font.SourceSansBold
+Open.Text = "open"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+Open.MouseButton1Click:Connect(function()
+	if Frame.Visible == false then
+		Frame.Visible = true
+	else
+		Frame.Visible = false
+	end
+end)
